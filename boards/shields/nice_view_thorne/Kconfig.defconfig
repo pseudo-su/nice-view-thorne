@@ -1,4 +1,4 @@
-if SHIELD_NICE_VIEW_GEM
+if SHIELD_NICE_VIEW_THORNE
 
 config LV_Z_VDB_SIZE
     default 100
@@ -27,23 +27,23 @@ config LV_Z_MEM_POOL_SIZE
 config ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
     imply NICE_VIEW_WIDGET_STATUS
 
-config NICE_VIEW_GEM_WPM_FIXED_RANGE
+config NICE_VIEW_THORNE_WPM_FIXED_RANGE
     bool "Enable fixed range for WPM gauge/chart"
     default y
 
-config NICE_VIEW_GEM_WPM_FIXED_RANGE_MAX
+config NICE_VIEW_THORNE_WPM_FIXED_RANGE_MAX
     int "Fixed range maximum for WPM gauge/chart"
     default 100
 
-config NICE_VIEW_GEM_ANIMATION
+config NICE_VIEW_THORNE_ANIMATION
     bool "Enable animation on peripheral"
     default y
 
-config NICE_VIEW_GEM_ANIMATION_FRAME
+config NICE_VIEW_THORNE_ANIMATION_FRAME
     int "Frame index (out of 16) to use if animation is disabled"
     default 0
 
-config NICE_VIEW_GEM_ANIMATION_MS
+config NICE_VIEW_THORNE_ANIMATION_MS
     int "Animation length in milliseconds"
     default 960
 
@@ -64,4 +64,4 @@ config NICE_VIEW_WIDGET_STATUS
 
 endif # !ZMK_SPLIT || ZMK_SPLIT_ROLE_CENTRAL
 
-endif # SHIELD_NICE_VIEW_GEM
+endif # SHIELD_NICE_VIEW_THORNE
