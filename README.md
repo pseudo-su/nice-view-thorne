@@ -1,6 +1,6 @@
-# nice-view-gem
+# nice-view-thorne
 
-![Preview](https://github.com/m165437/nice-view-gem/blob/main/.github/assets/preview.jpg?raw=true)
+![Preview](https://github.com/m165437/nice-view-thorne/blob/main/.github/assets/preview.jpg?raw=true)
 
 ### A sleek customization for the nice!view shield
 
@@ -28,22 +28,22 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: nice-view-gem #new entry
+    - name: nice-view-thorne #new entry
       remote: m165437 #new entry
       revision: main #new entry
   self:
     path: config
 ```
 
-Now, simply swap out the default nice_view shield on the board for nice_view_gem in your `build.yaml` file.
+Now, simply swap out the default nice_view shield on the board for nice_view_thorne in your `build.yaml` file.
 
 ```yml
 ---
 include:
   - board: nice_nano_v2
-    shield: kyria_left nice_view_adapter nice_view_gem #updated entry
+    shield: kyria_left nice_view_adapter nice_view_thorne #updated entry
   - board: nice_nano_v2
-    shield: kyria_right nice_view_adapter nice_view_gem #updated entry
+    shield: kyria_right nice_view_adapter nice_view_thorne #updated entry
 ```
 
 Finally, make sure to enable the custom status screen in your ZMK configuration:
@@ -59,10 +59,10 @@ Modify the behavior of this shield by adjusting these options in your personal c
 
 | Option                                     | Type | Description                                                                                                                                                                                                                                                       | Default |
 | ------------------------------------------ | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| `CONFIG_NICE_VIEW_GEM_WPM_FIXED_RANGE`     | bool | This shield uses a fixed range for the chart and gauge deflection. If you set this option to `n`, it will switch to a dynamic range, like the default nice!view shield, which dynamically adjusts based on the last 10 WPM values provided by ZMK.                | y       |
-| `CONFIG_NICE_VIEW_GEM_WPM_FIXED_RANGE_MAX` | int  | You can adjust the maximum value of the fixed range to align with your current goal.                                                                                                                                                                              | 100     |
-| `CONFIG_NICE_VIEW_GEM_ANIMATION`           | bool | If you find the animation distracting (or want to save on battery usage), you can turn it off by setting this option to `n`. It will instead pick a random frame of the animation every time you restart your keyboard.                                           | y       |
-| `CONFIG_NICE_VIEW_GEM_ANIMATION_MS`        | int  | Alternatively, you can slow down the animation. A high value, such as 96000, slows the animation considerably, showing the next frame every couple of seconds. The animation consists of 16 frames, and the default value of 960 milliseconds plays it at 60 fps. | 960     |
+| `CONFIG_NICE_VIEW_THORNE_WPM_FIXED_RANGE`     | bool | This shield uses a fixed range for the chart and gauge deflection. If you set this option to `n`, it will switch to a dynamic range, like the default nice!view shield, which dynamically adjusts based on the last 10 WPM values provided by ZMK.                | y       |
+| `CONFIG_NICE_VIEW_THORNE_WPM_FIXED_RANGE_MAX` | int  | You can adjust the maximum value of the fixed range to align with your current goal.                                                                                                                                                                              | 100     |
+| `CONFIG_NICE_VIEW_THORNE_ANIMATION`           | bool | If you find the animation distracting (or want to save on battery usage), you can turn it off by setting this option to `n`. It will instead pick a random frame of the animation every time you restart your keyboard.                                           | y       |
+| `CONFIG_NICE_VIEW_THORNE_ANIMATION_MS`        | int  | Alternatively, you can slow down the animation. A high value, such as 96000, slows the animation considerably, showing the next frame every couple of seconds. The animation consists of 16 frames, and the default value of 960 milliseconds plays it at 60 fps. | 960     |
 
 ## Credits
 
